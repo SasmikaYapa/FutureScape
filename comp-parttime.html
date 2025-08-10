@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-Time Job Complaint Form</title>
+    <style>
+        /* General Styles */
+        header {
+            background-color: #0d47a1;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="file"] {
+            margin-top: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Form Styles */
+        #studentForm, #employerForm {
+            display: none;
+        }
+        #studentForm, #employerForm label {
+            margin-top: 10px;
+        }
+
+        /* Title Styles */
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Role Selection Styles */
+        #role {
+            margin-bottom: 20px;
+        }
+
+        /* Issue Type and Resolution Styles */
+        #issueType, #typeissueDescriptionEmployer, #resolution, #resolutionEmployer {
+            margin-top: 4px;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+            input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+ input[type="button"] {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 20px auto;
+        transition: background-color 0.3s;
+    }
+
+    input[type="button"]:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>QuickJobs</h1>
+    <h3>Welcome to our Job Search Website</h3>
+</header>
+
+
+<form id="complaintForm" action="#" method="post" enctype="multipart/form-data">
+    <h2>Part-Time Job Complaint Form</h2>
+    <label for="role">Select Your Role:</label>
+    <select id="role" name="role">
+        <option value="student">Student</option>
+        <option value="employer">Employer</option>
+    </select>
+
+    <div id="studentForm" style="display: none;">
+        <label for="studentName">Your Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <label for="studentContact">Your Contact Information:</label>
+        <input type="text" id="studentContact" name="studentContact" required>
+
+        <label for="StudentEmail">Your Email Address:</label>
+        <input type="text" id="StudentEmail" name="StudentEmail" required>
+
+        <label for="employerNameStudent">Accused Employer's Name:</label>
+        <input type="text" id="employerNameStudent" name="employerNameStudent" required>
+
+        <label for="stationNameStudent">Service Station Name:</label>
+        <input type="text" id="stationNameStudent" name="stationNameStudent" required>
+
+        <label for="jobType">Your Job type:</label>
+        <select name="jobType">
+            <option value="Retail or Sales Associate">Retail or Sales Associate</option>
+            <option value="Food Service Worker">Food Service Worker</option>
+            <option value="Tutor">Tutor</option>
+            <option value="Internships or Co-ops">Internships or Co-ops</option>
+            <option value="Freelance Work">Freelance Work</option>
+            <option value="Campus Jobs">Campus Jobs</option>
+            <option value="Delivery Driver or Courier">Delivery Driver or Courier</option>
+            <option value="Event Staff">Event Staff</option>
+        </select>
+
+        <label for="issueType">Type of Issue:</label>
+        <select id="issueType" name="issueType" required>
+            <option value="">Select Type of Issue</option>
+            <option value="Payment-related Issues">Payment-related Issues</option>
+            <option value="Work Schedule Problems">Work Schedule Problems</option>
+            <option value="Unsafe Working Conditions">Unsafe Working Conditions</option>
+            <option value="Discrimination and Harassment">Discrimination and Harassment</option>
+            <option value="Lack of Training or Support">Lack of Training or Support</option>
+            <option value="Unfair Treatment or Policies">Unfair Treatment or Policies</option>
+            <option value="Communication Issues ">Communication Issues</option>
+            <option value="Other Issues">Other Issues</option>
+        </select>
+
+        <label for="issueDescriptionStudent">Description of the Issue:</label>
+        <textarea id="issueDescriptionStudent" name="issueDescriptionStudent" rows="4" required></textarea>
+
+        <label for="incidentDateTimeStudent">Date and Time of Incident:</label>
+        <input type="datetime-local" id="incidentDateTimeStudent" name="incidentDateTimeStudent" required><br>
+
+        <label for="evidenceStudent">Upload Relevant Documents or Evidence:</label>
+        <input type="file" id="evidenceStudent" name="evidenceStudent">
+
+        <select id="resolution" name="resolution" required>
+            <option value="">Select Preferred Resolution</option>
+            <option value="Policy Implementation">Policy Implementation</option>
+            <option value="Performance Improvement">Performance Improvement</option>
+            <option value="Conflict Resolution">Conflict Resolution</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="resolutionStudent">Description of Preferred Resolution:</label>
+        <textarea id="resolutionStudent" name="resolutionStudent" rows="4"></textarea>
+    </div>
+
+    <div id="employerForm" style="display: none;">
+        <label for="employerName">Your Name:</label>
+        <input type="text" id="employerName" name="employerName" required>
+
+        <label for="employerContact">Your Contact Information:</label>
+        <input type="text" id="employerContact" name="employerContact" required>
+
+        <label for="employerEmail">Your Email Address:</label>
+        <input type="text" id="employerEmail" name="employerEmail" required>
+
+        <label for="studentNameEmployer">Name of accused student:</label>
+        <input type="text" id="studentNameEmployer" name="studentNameEmployer" required>
+
+        <label for="stationNameEmployer">Service Station Name:</label>
+        <input type="text" id="stationNameEmployer" name="stationNameEmployer" required>
+
+        <label for="typeissueDescriptionEmployer">Type of the Issue:</label>
+        <select id="typeissueDescriptionEmployer" name="typeissueDescriptionEmployer" required>
+            <option value="">Select the Type of Issue</option>
+            <option value="Late Payment">Late Payment</option>
+            <option value="Miscommunication">Miscommunication</option>
+            <option value="Work Schedule Conflict">Work Schedule Conflict</option>
+            <option value="Performance Issue">Performance Issue</option>
+            <option value="Harassment">Harassment</option>
+            <option value="Safety Concern">Safety Concern</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="issueDescriptionEmployer">Description of the Issue:</label>
+        <textarea id="issueDescriptionEmployer" name="issueDescriptionEmployer" rows="4" required></textarea>
+
+        <label for="incidentDateTimeEmployer">Date and Time of Incident:</label>
+        <input type="datetime-local" id="incidentDateTimeEmployer" name="incidentDateTimeEmployer" required>
+
+        <label for="evidenceEmployer">Upload Relevant Documents or Evidence:</label>
+        <input type="file" id="evidenceEmployer" name="evidenceEmployer">
+
+        <select id="resolutionEmployer" name="resolutionEmployer" >
+            <option value="">Select Preferred Resolution</option>
+            <option value="Policy Implementation">Policy Implementation</option>
+            <option value="Performance Improvement">Performance Improvement</option>
+            <option value="Conflict Resolution">Conflict Resolution</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="resolutionEmployer">Preferred Resolution:</label>
+        <textarea id="resolutionEmployer" name="resolutionEmployer" rows="4"></textarea>
+    </div>
+<label for="affirmationCheckbox">
+        <input type="checkbox" id="affirmationCheckbox" required>
+        ** I affirm that to the best of my knowledge, the foregoing information is true, accurate, and complete.
+    </label>
+
+ 
+    <input type="button" value="Continue" onclick="continueToNextPage()">
+
+</form>
+
+<div id="message-container"></div>
+<div id="responseMessage" style="display: none;"></div> <!-- Add this line -->
+
+<script>
+    // JavaScript to toggle between student and employer complaint forms
+    document.addEventListener('DOMContentLoaded', function() {
+        var role = document.getElementById('role').value;
+        toggleForm(role);
+    });
+
+    document.getElementById('role').addEventListener('change', function() {
+        var role = this.value;
+        toggleForm(role);
+    });
+
+    function toggleForm(role) {
+        if (role === 'student') {
+            document.getElementById('studentForm').style.display = 'block';
+            document.getElementById('employerForm').style.display = 'none';
+        } else if (role === 'employer') {
+            document.getElementById('employerForm').style.display = 'block';
+            document.getElementById('studentForm').style.display = 'none';
+        }
+    }
+
+    function continueToNextPage() {
+        // Redirect to the next page
+        window.location.href = 'file:///C:/Users/User/OneDrive/Desktop/Bus%20Regulatory%20System/complainREC.html';
+    }
+</script>
+
+</body>
+</html>

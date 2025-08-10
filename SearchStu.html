@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employer Dashboard - Find Part-Time Jobs for Campus Students</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+  }
+
+  header {
+    background-color: #001f3f; /* Dark blue */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1, h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  th {
+    background-color: #001f3f;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  th:hover {
+    background-color: #003366;
+  }
+
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+
+  .search-form {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .search-form input[type="text"] {
+    width: 250px;
+    padding: 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  .search-form button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-form button:hover {
+    background-color: #555;
+  }
+
+  @media screen and (max-width: 600px) {
+    .search-form input[type="text"] {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>QuickJobs</h1>
+  <h3>Employer Dashboard <br> Find Part-Time Jobs for Campus Students</h3>
+</header>
+
+<div class="container">
+  <div class="search-form">
+    <input type="text" id="searchInput" aria-label="Search by Job Category or Location" placeholder="Search by Job Category or Location">
+    <button id="searchButton" aria-label="Search">🔍</button>
+  </div>
+
+  <table id="student-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Skills</th>
+        <th>Part-Time Job Category</th>
+        <th>Availability</th>
+        <th>Telephone Number</th>
+        <th>Email Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nimal Perera</td>
+        <td>Colombo</td>
+        <td>HTML, CSS, JavaScript</td>
+        <td>Web Development</td>
+        <td>Weekdays</td>
+        <td>0771234567</td>
+        <td>nimal@example.com</td>
+      </tr>
+      <tr>
+        <td>Kamal Silva</td>
+        <td>Kandy</td>
+        <td>Python, Java, SQL</td>
+        <td>Data Analysis</td>
+        <td>Weekends</td>
+        <td>0712345678</td>
+        <td>kamal@example.com</td>
+      </tr>
+
+      <tr>
+        <td>Sunil Fernando</td>
+        <td>Galle</td>
+        <td>Java, PHP, MySQL</td>
+        <td>Customer Service</td>
+        <td>Evenings</td>
+        <td>0763456789</td>
+        <td>sunilfernando@example.com</td>
+      </tr>
+      <tr>
+        <td>Wasantha Rajapakse</td>
+        <td>Kurunegala</td>
+        <td>React, Node.js, MongoDB</td>
+        <td>Graphic Design</td>
+        <td>Flexible</td>
+        <td>0784567890</td>
+        <td>wasantha@example.com</td>
+      </tr>
+      <tr>
+        <td>Anula Bandara</td>
+        <td>Matara</td>
+        <td>C++, HTML, CSS</td>
+        <td>Social Media Management</td>
+        <td>Weekends</td>
+        <td>0756789012</td>
+        <td>anula@example.com</td>
+      </tr>
+      <tr>
+        <td>Samantha Gunawardena</td>
+        <td>Nuwara Eliya</td>
+        <td>Python, Django, JavaScript</td>
+        <td>Content Writing</td>
+        <td>Weekdays</td>
+        <td>0712345678</td>
+        <td>samantha@example.com</td>
+      </tr>
+      <tr>
+        <td>Kusal Mendis</td>
+        <td>Anuradhapura</td>
+        <td>React Native, Firebase</td>
+        <td>Event Planning</td>
+        <td>Evenings</td>
+        <td>0763456789</td>
+        <td>kusal@example.com</td>
+      </tr>
+      <tr>
+        <td>Chathura Perera</td>
+        <td>Kegalle</td>
+        <td>Java, Spring Boot, Angular</td>
+        <td>Software Testing</td>
+        <td>Flexible</td>
+        <td>0784567890</td>
+        <td>chathura@example.com</td>
+      </tr>
+      <tr>
+        <td>Dilani Silva</td>
+        <td>Badulla</td>
+        <td>PHP, Laravel, MySQL</td>
+        <td>Virtual Assistance</td>
+        <td>Weekdays</td>
+        <td>0756789012</td>
+        <td>dilani@example.com</td>
+      </tr>
+      <tr>
+        <td>Ruwan Rathnayake</td>
+        <td>Ratnapura</td>
+        <td>HTML, CSS, JavaScript</td>
+        <td>Online Tutoring</td>
+        <td>Evenings</td>
+        <td>0712345678</td>
+        <td>ruwan@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="pagination" class="pagination"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const table = document.getElementById('student-table');
+    const tbody = table.querySelector('tbody');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    // Function to sort table rows based on column index
+    function sortTable(columnIndex, ascending) {
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+
+      rows.sort((a, b) => {
+        const aValue = a.cells[columnIndex].textContent.trim();
+        const bValue = b.cells[columnIndex].textContent.trim();
+
+        if (ascending) {
+          return aValue.localeCompare(bValue);
+        } else {
+          return bValue.localeCompare(aValue);
+        }
+      });
+
+      tbody.innerHTML = '';
+      rows.forEach(row => tbody.appendChild(row));
+    }
+
+    // Function to perform search
+    function search() {
+      const searchText = searchInput.value.toLowerCase();
+      const rows = tbody.querySelectorAll('tr');
+
+      rows.forEach(row => {
+        const jobCategory = row.cells[3].textContent.toLowerCase();
+        const location = row.cells[1].textContent.toLowerCase();
+        if (jobCategory.includes(searchText) || location.includes(searchText)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    // Add event listeners to table headers for sorting
+    const headers = table.querySelectorAll('th');
+    headers.forEach((header, index) => {
+      header.addEventListener('click', () => {
+        const ascending = !header.classList.contains('asc');
+        headers.forEach(h => h.classList.remove('asc', 'desc'));
+        header.classList.toggle(ascending ? 'asc' : 'desc');
+        sortTable(index, ascending);
+      });
+    });
+
+    // Add event listener to search button
+    searchButton.addEventListener('click', search);
+  });
+</script>
+
+</body>
+</html>

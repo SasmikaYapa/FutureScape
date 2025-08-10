@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Student Registration - Part-Time Jobs</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+/* Global Styles */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(135deg, #0d47a1, #001064);
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.registration-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.rules-regulations {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.rules-list {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.rules-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: calc(100% - 160px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.note {
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: #4caf50;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 1em;
+    }
+
+    label {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="number"] {
+        width: calc(100% - 160px);
+    }
+
+    select {
+        width: calc(100% - 160px);
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>QuickJobs.lk</h1>
+        <h2>Your Path to Part-Time Success</h2>
+    </header>
+
+    <section class="info-section">
+        <h2>Registration Form</h2>
+        <p class="registration-paragraph">Are you a student seeking part-time employment opportunities to supplement your studies? Look no further! Our registration process is tailored to fit your needs. Whether you're looking for flexible hours to accommodate your class schedule or eager to gain valuable work experience, we're here to help. Simply fill out our registration form with your details, including your availability, skills, and preferences. Once registered, you'll gain access to a wide range of part-time job listings from reputable employers eager to hire students like you. Don't miss out on the chance to kickstart your career while pursuing your education. Register today and take the first step towards your professional journey!</p>
+
+        <p class="rules-regulations">By submitting this form, you agree to abide by the following rules and regulations:</p>
+        <ol class="rules-list">
+            <li>All information provided must be accurate and truthful.</li>
+            <li>Submission of false information may lead to disqualification from future opportunities.</li>
+            <li>Your personal information will be handled in accordance with our privacy policy.</li>
+            <li>We reserve the right to verify the information provided.</li>
+            <li>Submission of this form does not guarantee employment.</li>
+            <li>You must be above 18 years of age to register.</li>
+        </ol>
+
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="student-name">Student Name:</label>
+                <input type="text" id="student-name" name="student_name" required>
+            </div>
+            <div class="form-group">
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" name="student_id" required>
+            </div>
+            <div class="form-group">
+                <label for="student-email">Email Address:</label>
+                <input type="email" id="student-email" name="student_email" required>
+            </div>
+            <div class="form-group">
+                <label for="student-phone">Phone Number:</label>
+                <input type="tel" id="student-phone" name="student_phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ID">Your NIC No:</label>
+                <input type="text" id="ID" name="ID" required maxlength="12">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="age">Your Age (must be 18 or above):</label>
+                <input type="number" id="age" name="age" required min="18">
+            </div>
+
+            <div class="form-group">
+                <label>Availability:</label>
+                <div class="availability-options">
+                    <label for="day-monday"><input type="checkbox" id="day-monday" name="availability[]" value="Monday"> Monday</label>
+                    <label for="day-tuesday"><input type="checkbox" id="day-tuesday" name="availability[]" value="Tuesday"> Tuesday</label>
+                    <label for="day-wednesday"><input type="checkbox" id="day-wednesday" name="availability[]" value="Wednesday"> Wednesday</label>
+                    <label for="day-thursday"><input type="checkbox" id="day-thursday" name="availability[]" value="Thursday"> Thursday</label>
+                    <label for="day-friday"><input type="checkbox" id="day-friday" name="availability[]" value="Friday"> Friday</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="work-hours">Working Hours (per week):</label>
+                <input type="number" id="work-hours" name="work_hours" min="1" max="40" placeholder="Enter the number of hours you can work per week">
+            </div>
+
+            <div class="form-group">
+                <label for="salaryLimit">Salary Limit Per day:</label>
+                <select name="salaryLimit" required>
+                    <option value="">Select Salary Limit (LKR)</option>
+                    <option value="1000">1,000-3,000 LKR</option>
+                    <option value="3000">3,000-5,000 LKR</option>
+                    <option value="5000">5,000 or above LKR</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Skills and Experience (Optional):</label>
+                <textarea id="skills" name="skills" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="job-preferences">Job Preferences (Optional):</label>
+                <input type="text" id="job-preferences" name="job_preferences" placeholder="e.g., library assistant, computer lab assistant">
+            </div>
+            <button type="submit" id="submit-btn">Submit Registration</button>
+        </form>
+        <p class="note">**Note:** Upon submitting this form, your information will be forwarded to the university's career center for review. They will contact you regarding available part-time job opportunities.</p>
+
+        <p id="response-message" class="success-message" style="display: none;">Thank you for registering! We'll contact you shortly regarding available part-time job opportunities.</p>
+    </section>
+
+    <script>
+        // JavaScript code here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Accessing form elements
+            const form = document.getElementById('registration-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const responseMessage = document.getElementById('response-message');
+
+            // Adding event listener to form submission
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Validate form fields before submission
+                if (validateForm()) {
+                    // If form is valid, show success message
+                    responseMessage.style.display = 'block';
+                    // Optionally, you can reset the form here
+                    // form.reset();
+                }
+            });
+
+            // Function to validate form fields
+            function validateForm() {
+                // Accessing form fields
+                const studentName = document.getElementById('student-name').value;
+                const studentID = document.getElementById('student-id').value;
+                const studentEmail = document.getElementById('student-email').value;
+                const studentPhone = document.getElementById('student-phone').value;
+                const dob = document.getElementById('dob').value;
+                const age = document.getElementById('age').value;
+
+                // Simple validation example: Checking if required fields are not empty
+                if (studentName.trim() === '' || studentID.trim() === '' || studentEmail.trim() === '' || studentPhone.trim() === '' || dob.trim() === '' || age.trim() === '') {
+                    alert('Please fill in all required fields.');
+                    return false;
+                }
+
+                // Additional validation logic can be added here
+
+                return true; // Form is valid
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneur Job Posting</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color:  #0d47a1;
+            color: #333;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        select {
+            width: calc(100% - 24px);
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .success {
+            color: #155724;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #3498db;
+        }
+
+        @media screen and (max-width: 600px) {
+            /* Add styles for smaller screens, e.g., mobile devices */
+            body {
+                font-size: 14px;
+            }
+
+            header {
+                padding: 0.5em;
+            }
+
+            section {
+                margin: 10px;
+            }
+        }
+
+        /* CSS for the registration paragraph */
+        .registration-paragraph {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        .registration-paragraph h2 {
+            color: #4CAF50;
+        }
+
+        .registration-paragraph p {
+            margin-bottom: 20px;
+        }
+
+        .registration-paragraph a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .registration-paragraph a:hover {
+            text-decoration: underline;
+        }
+
+        .registration-paragraph button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .registration-paragraph button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>QuickJobs <br> Your Path to Part-Time Success</h1>
+    </header>
+
+
+    <section id="date-time"></section>
+
+    <section class="info-section">
+        <h2>Job Posting Form</h2>
+        <p class="registration-paragraph">Are you an entrepreneur looking to post job opportunities for potential candidates? You're in the right place! Use this form to provide details about the job opening, including job type, salary range, location, and any other relevant information. Once posted, your job listing will be visible to job seekers, helping you find the right candidates for your business needs. Fill out the form below to get started.</p>
+
+        <form id="job-posting-form" action="#" method="post" onsubmit="return submitForm()">
+
+
+            <label for="name">Enterprise Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="jobType">Job Title:</label>
+            <select name="jobType" id="jobType">
+                <option value="Retail or Sales Associate">Retail or Sales Associate</option>
+                <option value="Food Service Worker">Food Service Worker</option>
+                <option value="Tutor">Tutor</option>
+                <option value="Internships or Co-ops">Internships or Co-ops</option>
+                <option value="Freelance Work">Freelance Work</option>
+                <option value="Campus Jobs">Campus Jobs</option>
+                <option value="Delivery Driver or Courier">Delivery Driver or Courier</option>
+                <option value="Event Staff">Event Staff</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="other">If selected other, please mention it:</label>
+            <input type="text" id="other" name="other">
+
+            <label for="salaryRange">Salary Range:</label>
+            <select name="salaryRange" required>
+                <option value="">Select Salary Range</option>
+                <option value="5000-10000">5,000-10,000 LKR</option>
+                <option value="10000-20000">10,000-20,000 LKR</option>
+                <option value="20000-30000">20,000-30,000 LKR</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <select id="location" name="location">
+                <option value="">Select Location</option>
+                <option value="Colombo">Colombo</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="Kalutara">Kalutara</option>
+                <option value="Kandy">Kandy</option>
+                <option value="Matale">Matale</option>
+                <option value="Galle">Galle</option>
+                <option value="Matara">Matara</option>
+                <option value="Hambantota">Hambantota</option>
+                <option value="Jaffna">Jaffna</option>
+                <option value="Kurunegala">Kurunegala</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="description">Job Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="requirements">Job Requirements:</label>
+            <textarea id="requirements" name="requirements" rows="4" required></textarea>
+
+            <label for="contactEmail">Contact Email:</label>
+            <input type="email" id="contactEmail" name="contactEmail" required>
+
+            <label for="contactPhone">Contact Phone:</label>
+            <input type="tel" id="contactPhone" name="contactPhone" required>
+
+            <label for="affirmationCheckbox">
+                <input type="checkbox" id="affirmationCheckbox" required>
+                ** I affirm that to the best of my knowledge, the foregoing information is true, accurate, and complete.
+            </label>
+
+            <button type="submit">Submit Form</button>
+        </form>
+
+        <div id="message-container"></div>
+    </section>
+
+<script>
+    function updateDateTime() {
+        var now = new Date();
+        var dateTimeString = now.toLocaleString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+        });
+        document.getElementById('date-time').textContent = dateTimeString;
+    }
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+
+    // Initial call to set the initial date and time
+    updateDateTime();
+
+
+    // Function to handle form submission
+    function submitForm() {
+        // Display the success message
+        displayMessage("Your form has been successfully submitted. Thank you for providing the necessary information. We'll be in touch shortly.  Confirmation message sent to your email.", true);
+        // Prevent default form submission
+        return false;
+    }
+
+    // Function to display message
+    function displayMessage(message, isSuccess) {
+        var messageContainer = document.getElementById('message-container');
+        messageContainer.innerHTML = '<p class="' + (isSuccess ? 'success' : 'error') + '">' + message + '</p>';
+    }
+
+</script>
+    <footer>
+        <p>&copy; 2024 FutureScape: Your Path to Part-Time Success</p>
+    </footer>
+</body>
+
+</html>
+

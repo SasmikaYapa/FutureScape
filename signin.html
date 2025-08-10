@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0d47a1;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 150px auto 100px; /* Adjusted margin to accommodate the header */
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0d47a1; /* Green color for the heading */
+        }
+
+        label {
+            font-weight: bold;
+            color: #333; /* Dark gray color for the labels */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #fff; /* Background color for the dropdown */
+            color: #333; /* Text color for the dropdown */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #0d47a1;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            text-align: center;
+            color: #666; /* Dark gray color for the message */
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .message a {
+            color: #4caf50; /* Green color for the link */
+            text-decoration: none;
+        }
+
+        .message a:hover {
+            text-decoration: underline;
+        }
+
+        .create-account-message {
+            text-align: center;
+            color: #666; /* Dark gray color for the message */
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .create-account-message a {
+            color: #008080; /* Dark cyan color for the link */
+            text-decoration: none;
+        }
+
+        .create-account-message a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>QuickJobs</h1>
+    <p>Welcome to our platform!</p>
+</header>
+
+<div class="container">
+    <h2>Sign In</h2>
+    <form id="signInForm" action="file:///C:/Users/User/Downloads/Datasets/Datasets/Home.html" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="role">I am a:</label>
+        <select id="role" name="role">
+            <option value="student">Campus Student</option>
+            <option value="employer">Employer</option>
+        </select>
+
+        <input type="submit" value="Sign In">
+    </form>
+    <p class="message">Forgot your password? <a href="file:///C:/Users/User/Downloads/Datasets/Datasets/Regist.html">Reset here</a>.</p>
+    <p id="signInMessage" class="message"></p>
+    <p class="create-account-message">Don't have an account? <a href="file:///C:/Users/User/Downloads/Datasets/Datasets/Regist.html">Create one</a>.</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 QuickJobs.lk</p>
+</footer>
+
+</body>
+</html>

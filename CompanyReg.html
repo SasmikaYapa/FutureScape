@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0d47a1; /* Dark blue */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0d47a1; /* Dark blue */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 12px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #0d47a1; /* Dark blue */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1a237e; /* Darker shade of blue on hover */
+        }
+
+        .success-message {
+            text-align: center;
+            color: #4caf50;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>QuickJobs.lk</h1>
+</header>
+
+<div class="container">
+    <h2>Employer Registration</h2>
+    <form id="employerRegistrationForm" action="#" method="post">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" name="companyName" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="industry">Industry</label>
+        <input type="text" id="industry" name="industry" required>
+
+        <label for="website">Website</label>
+        <input type="text" id="website" name="website">
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <label for="contactPerson">Contact Person</label>
+        <input type="text" id="contactPerson" name="contactPerson" required>
+
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required>
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="4"></textarea>
+
+        <button type="submit">Register</button>
+    </form>
+    <p class="success-message" id="successMessage"></p>
+</div>
+
+<footer>
+    <p>&copy; 2024 QuickJobs.lk</p>
+</footer>
+
+<script>
+    document.getElementById('employerRegistrationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form values
+        var companyName = document.getElementById('companyName').value;
+        var email = document.getElementById('email').value;
+        var industry = document.getElementById('industry').value;
+        var website = document.getElementById('website').value;
+        var description = document.getElementById('description').value;
+        var contactPerson = document.getElementById('contactPerson').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var address = document.getElementById('address').value;
+
+        // Display success message
+        var successMessage = document.getElementById('successMessage');
+        successMessage.innerHTML = "Registration successful! <br>Company Name: " + companyName +
+                                    "<br>Email: " + email +
+                                    "<br>Industry: " + industry +
+                                    "<br>Website: " + website +
+                                    "<br>Description: " + description +
+                                    "<br>Contact Person: " + contactPerson +
+                                    "<br>Phone Number: " + phoneNumber +
+                                    "<br>Address: " + address;
+    });
+</script>
+
+</body>
+</html>

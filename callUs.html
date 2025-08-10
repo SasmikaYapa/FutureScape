@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.contact-info h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Additional CSS for Contact Us page */
+
+/* Style the header text */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the paragraph text */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Style the form input fields */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Adjust margin for footer */
+ footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+.back-to-home {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+  background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<div class="container">
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>If you have any complaints or concerns related to part-time job opportunities, please don't hesitate to reach out to us:</p>
+        <ul>
+            <li><strong>Email:</strong> complaints@parttimejobs.org</li>
+            <li><strong>Phone:</strong> 123-456-7890</li>
+        </ul>
+        <p>Your feedback is valuable to us and helps us improve the quality and safety of part-time job listings. We're here to address any issues you may encounter during your job search.</p>
+    </div>
+
+    <form action="#" method="post" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<div id="submission-message" style="display: none;">
+    <p>Thank you for reaching out to us! Your message has been successfully submitted.</p>
+</div>
+<a href="file:///C:/Users/User/Downloads/Datasets/Datasets/Home.html" class="back-to-home">Back to Home</a>
+<footer>
+    <p>&copy; 2024 Job Search Website</p>
+</footer>
+
+<!-- JavaScript code -->
+<script>
+    // Get the form element
+    const form = document.querySelector('.contact-form');
+
+    // Listen for form submission
+    form.addEventListener('submit', function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Show the submission message
+        document.getElementById('submission-message').style.display = 'block';
+
+        // Optionally, you can clear the form fields after submission
+        form.reset();
+    });
+</script>
+
+
+</body>
+</html>

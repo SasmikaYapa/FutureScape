@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0d47a1; /* Dark blue */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding-bottom: 80px; /* Added padding to accommodate footer */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0d47a1; /* Dark blue */
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px; /* Adjust space between buttons */
+            margin-top: 20px;
+        }
+
+        button {
+            flex: 1;
+            background-color: #0d47a1; /* Dark blue */
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1a237e; /* Darker shade of blue on hover */
+        }
+
+        .message {
+            text-align: center;
+            color: #ff0000;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .success-message {
+            text-align: center;
+            color: #4caf50;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #333; /* Dark gray */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Set a specific height for the footer */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>QuickJobs</h1>
+    <h3>Welcome to our Job Search Website</h3>
+</header>
+
+<div class="container">
+    <h2>Registration</h2>
+    <form id="registrationForm" action="#" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <div class="button-group">
+            <a href="file:///C:/Users/User/OneDrive/Desktop/Bus%20Regulatory%20System/StudentJoin.html"><button type="button" id="studentButton">Register as <br> Campus Student</button></a>
+
+	<a href="file:///C:/Users/User/OneDrive/Desktop/Bus%20Regulatory%20System/CompanyReg.html">
+            <button type="button" id="employerButton">Register as <br> Employer</button></a>
+        </div>
+    </form>
+    <p class="message" id="errorMessage"></p>
+    <p class="success-message" id="successMessage"></p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Job Search Website</p>
+</footer>
+
+<script>
+    function register(role) {
+        // Get form data
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Simple validation
+        if (!username || !email || !password || !confirmPassword) {
+            document.getElementById('errorMessage').textContent = "All fields are required.";
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            document.getElementById('errorMessage').textContent = "Passwords do not match.";
+            return;
+        }
+
+        // Clear error message
+        document.getElementById('errorMessage').textContent = "";
+
+        // Display success message
+        var successMessage = document.getElementById('successMessage');
+        successMessage.textContent = "Registration successful!";
+
+        // You can send the form data to your server using AJAX or fetch API for backend processing
+        // Example: Send form data to a backend endpoint using fetch API
+        // fetch('/register', {
+        //     method: 'POST',
+        //     body: JSON.stringify({ username, email, password, role }),
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // })
+        // .then(response => response.json())
+        // .then(data => {
+        //     console.log('Registration successful:', data);
+        //     // Handle success response from the server
+        //    
+    }
+</script>
+
+</body>
+</html>

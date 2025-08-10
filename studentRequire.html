@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Job Requirement Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b9da9d;
+  }
+ /* General Styles */
+        .header {
+        background-color: #2a780b; /* Green color */
+        color: #fff; /* Text color */
+        text-align: center;
+        padding: 1em;
+    }
+
+
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            font-family:times new roman;
+        }
+
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  label {
+    font-weight: bold;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group input, 
+  .form-group select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23444444" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 12px);
+    background-position-y: 50%;
+    padding-right: 30px;
+  }
+  .form-group label.checkbox {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group label.checkbox input {
+    margin-right: 5px;
+  }
+  .form-group .checkbox-options {
+    margin-left: 20px;
+  }
+  .form-group .time-slots {
+    display: flex;
+    align-items: center;
+  }
+  .form-group .time-slots label {
+    margin-right: 10px;
+  }
+  .form-group .time-slots select {
+    flex: 1;
+    margin-right: 10px;
+  }
+  .form-group .submit-btn {
+    text-align: center;
+  }
+  .form-group .submit-btn button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>QuickJobs</h1><h3> A Right Guide to Sucsess</h3>
+
+</div>
+
+<div class="container">
+  <h2>Student Job Requirement Form</h2>
+  <form id="jobForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="nic">NIC Number:</label>
+      <input type="text" id="nic" name="nic" required>
+    </div>
+    <div class="form-group">
+      <label for="tp">Phone Number:</label>
+      <input type="tel" id="tp" name="tp" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="company">Company Name:</label>
+      <input type="text" id="company" name="company" required>
+    </div>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required>
+    </div>
+    <div class="form-group">
+      <label class="checkbox">Part-time Job Category:</label>
+      <div class="checkbox-options">
+        <label><input type="checkbox" name="category" value="sanitary"> Sanitary</label>
+        <label><input type="checkbox" name="category" value="hotel"> Hotel Job</label>
+        <label><input type="checkbox" name="category" value="delivery"> Delivery Job</label>
+        <label><input type="checkbox" name="category" value="security"> Security Jobs</label>
+        <label><input type="checkbox" name="category" value="agedcare"> Aged Care</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="timeSlots">Available Time Slots:</label>
+      <div class="time-slots">
+        <select id="startSlot" name="startSlot" required>
+          <option value="09:00">9:00 AM</option>
+          <option value="12:00">12:00 PM</option>
+          <option value="15:00">3:00 PM</option>
+        </select>
+        <span>-</span>
+        <select id="endSlot" name="endSlot" required>
+          <option value="12:00">12:00 PM</option>
+          <option value="15:00">3:00 PM</option>
+          <option value="18:00">6:00 PM</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="date">Date and Time:</label>
+      <input type="datetime-local" id="date" name="date" required>
+    </div>
+    <div class="form-group">
+      <label for="expectedSalary">Expected Salary:</label>
+      <input type="number" id="expectedSalary" name="expectedSalary" required>
+    </div>
+    <div class="form-group submit-btn">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  // JavaScript to handle form submission and validation
+  document.getElementById("jobForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Add your form submission logic here
+    // Validate the form fields if needed
+    // Submit the form data using AJAX or other method
+    // Display success or error message
+  });
+</script>
+
+</body>
+</html>
